@@ -1,5 +1,5 @@
-import Welcome from "./Welcome"
-import Message from "./Message"
+import AlertClock from "./AlertClock"
+
 
 
 
@@ -7,7 +7,7 @@ function App() {
 
   return (
     <div>
-      <Welcome age= {22} name={"Hossain"} />
+      <AlertClock alertHanler={()=>alert((new Date()).toLocaleTimeString())}/>
       
     </div>
   )

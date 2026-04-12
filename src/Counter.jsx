@@ -1,25 +1,37 @@
-import { useState } from "react"
-import { CounterDisplay } from "./CounterDisplay";
+import { useEffect, useState } from "react"
 
-export function Counter ({intialValue, countNumber}) {
-    const [counter, setCounter]=useState(0)
+
+export function Counter ({initialValue, countNumber}) {
+    const [count, setCount]=useState(initialValue)
+    const [time, setTime]= useState(new Date())
+
+    useEffect(()=>{
+        console.log(count);
+    },[count])
+   
+
+    useEffect(()=>{
+        setInterval(()=>{
+            setTime(new Date())
+
+        }, 1000)
+    },[time])
 
     function increment() {
-        setCounter((c)=>c+countNumber);
+        setCount((c)=>c+countNumber);
     }
-
-
     function decrement() {
-        setCounter((c)=>c-countNumber);
+        setCount((c)=>c-countNumber);
     }
      
     function reset() {
-        setCounter(intialValue);
+        setCount(initialValue);
     }
 
     return (
         <div>
-            <CounterDisplay counter={counter}/>
+            <h2>The current time is: {time.toLocaleTimeString()}</h2>
+            <h2>{count}</h2>
             <button onClick={increment}>Increment</button>
             <button onClick={decrement}>Decrement</button>
             <button onClick={reset}>Reset</button>

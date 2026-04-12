@@ -1,10 +1,13 @@
-import Hello from "./Hello"
+import Welcome from "./Welcome"
+
+
 
 function App() {
 
   return (
     <div>
-      <Hello/>
+      <Welcome age= {22} name={"Hossain"} />
+      
     </div>
   )
 }

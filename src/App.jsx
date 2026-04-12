@@ -1,4 +1,5 @@
-import AlertClock from "./AlertClock"
+
+import { Counter } from "./Counter"
 
 
 
@@ -7,7 +8,7 @@ function App() {
 
   return (
     <div>
-      <AlertClock alertHanler={()=>alert((new Date()).toLocaleTimeString())}/>
+      <Counter intialValue={5} countNumber={2}/>
       
     </div>
   )

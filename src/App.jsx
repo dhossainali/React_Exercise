@@ -1,4 +1,5 @@
 import Welcome from "./Welcome"
+import Message from "./Message"
 
 
 

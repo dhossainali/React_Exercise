@@ -1,4 +1,4 @@
-import { Counter } from "./Counter"
+import { MouseClicker } from "./MouseClicker"
 
 
 
@@ -7,7 +7,7 @@ function App() {
 
   return (
     <div>
-      <Counter initialValue={5} countNumber={2}/>
+      <MouseClicker/>
       
     </div>
   )

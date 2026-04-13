@@ -1,0 +1,22 @@
+.user-message {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    
+
+}
+
+.chatbot-message{
+    display: flex;
+    justify-content: end;
+    align-items: center;
+
+}
+
+.message {
+background-color: rgb(235, 217, 217);
+    
+    padding: 8px;
+    margin: 10px;
+    border-radius: 8px;
+}
